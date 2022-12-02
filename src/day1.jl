@@ -1,12 +1,12 @@
-🧝🧝🧝 = []
-🧝 = []
+🧝s = []
+🧝 = 0
 for 🌰 in eachline("./data/input_day1.txt")
     if 🌰 == ""
-        push!(🧝🧝🧝, 🧝)
-        🧝 = []
+        push!(🧝s, 🧝)
+        🧝 = 0
     else
-        push!(🧝, parse(Int64, 🌰))
+        🧝 += parse(Int64, 🌰)
     end
 end
-maximum(sum.(🧝🧝🧝))
-sum(sort(sum.(🧝🧝🧝), rev = true)[1:3])
+@show maximum(🧝s)
+@show sum(sort(🧝s, rev = true)[1:3])

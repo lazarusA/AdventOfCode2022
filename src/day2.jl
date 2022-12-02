@@ -1,26 +1,4 @@
-# AdventOfCode2022
-
-## Day 1. A classic for loop and push
-
-```julia
-🧝s = []
-🧝 = 0
-for 🌰 in eachline("./data/input_day1.txt")
-    if 🌰 == ""
-        push!(🧝s, 🧝)
-        🧝 = 0
-    else
-        🧝 += parse(Int64, 🌰)
-    end
-end
-@show maximum(🧝s)
-@show sum(sort(🧝s, rev = true)[1:3])
-```
-
-## Day 2. Overcomplicating things with multi dispatch
-
-```julia
-# Rules !
+# Rules ! Overcomplicating things with multi dispatch
 abstract type 📏 end
 struct 🪨 <: 📏 end
 struct ✂ <: 📏 end
@@ -65,6 +43,3 @@ for l in eachline("./data/input_day2.txt")
     end
 end
 @show total_score
-```
-
-## Day 3.
