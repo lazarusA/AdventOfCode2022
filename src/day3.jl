@@ -18,7 +18,7 @@ for (i,l) in enumerate(eachline("./data/input_day3.txt"))
     🎒 = collect(l)
     push!(📛, 🎒)
     if mod(i,3) == 0
-        item = intersect(intersect(📛[1], 📛[2]), 📛[3])[1]
+        item = intersect(📛...)[1]
         sum_priorities += priority(item)
         📛 = []
     end
