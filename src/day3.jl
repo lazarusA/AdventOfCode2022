@@ -24,3 +24,7 @@ for (i,l) in enumerate(eachline("./data/input_day3.txt"))
     end
 end
 @show sum_priorities
+
+# https://twitter.com/rawlexander/status/1599003411080355840/photo/1
+# priority = [indexin(line, ['a':'z'; 'A':'Z']) for line in eachline("./data/input_day3.txt")]
+# Iterators.partition(priority, 3)
