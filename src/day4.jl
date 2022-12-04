@@ -1,9 +1,8 @@
 contained_part1 = 0
 contained_part2 = 0
 for l in eachline("./data/input_day4.txt")
-    uno, dos = split(l, ",")
-    🧝1 =  collect(range(parse.(Int64, split(uno,"-"))...))
-    🧝2 =  collect(range(parse.(Int64, split(dos,"-"))...))
+    i, j, k, m = parse.(Int, split(l, r"[,-]"))
+    🧝1, 🧝2 =  i:j, k:m
     if 🧝1 ⊆ 🧝2 || 🧝2 ⊆ 🧝1
         contained_part1 += 1
     end
