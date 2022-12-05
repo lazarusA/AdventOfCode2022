@@ -6,7 +6,7 @@ for l in eachline("./data/input_day4.txt")
     if 🧝1 ⊆ 🧝2 || 🧝2 ⊆ 🧝1
         contained_part1 += 1
     end
-    if !isempty(∩(🧝1,🧝2))
+    if !isempty(∩(🧝1,🧝2)) # try also \subsup, ⫓
         contained_part2 += 1
     end
 end
