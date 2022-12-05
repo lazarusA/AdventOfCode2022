@@ -19,7 +19,8 @@ function getstop(lins)
         end
     end
 end
-
+#sep = findfirst(x -> x[2] == '1', lins)
+#pos = findall(r"\d", lins[num_row]) |> x -> first.(x)
 sep, pos = getstop(lins)
 
 function getstacks(sep, pos)
@@ -53,6 +54,8 @@ for r in rules; move_📦!(stacks, r) end
 @show join(first.(stacks));
 
 # part 2
+stacks = getstacks(sep, pos)
+rules = getrules(sep, lins)
 
 function move_📦!(stacks, rule)
     a, f, t = rule
